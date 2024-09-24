@@ -1,19 +1,18 @@
-# How to deploy a React Vite App using Docker
+# How to create and deploy a React Vite App using Docker
 
 https://thedkpatel.medium.com/dockerizing-react-application-built-with-vite-a-simple-guide-4c41eb09defa
 
-1. How to quickly create a React App using Vite
+1. How to quickly create a React App using Vite:
 
-```
-npm create vite@latest docker-react-app-test --template react-ts
-```
+   ```
+   npm create vite@latest docker-react-app-test --template react-ts
+   ```
 
-2. when setting up a vite react app with nextjs, should i use the TypeScript variant or the TypeScript + SWC variant?
-   Typescript
+2. When setting up a vite react app with Vite, should I select the `TypeScript` variant or the `TypeScript + SWC` variant? Answer: `Typescript`
 
 3. Install Docker: https://docs.docker.com/engine/install/
 
-4. Setup Dockerfile:
+4. Setup `Dockerfile`:
 
    ```
    FROM node:20
@@ -33,7 +32,7 @@ npm create vite@latest docker-react-app-test --template react-ts
    CMD [ "npm", "run", "preview", "--", "--host" ]
    ```
 
-5. Update vite.config.ts:
+5. Update `vite.config.ts`:
 
    ```
    import { defineConfig } from "vite";
